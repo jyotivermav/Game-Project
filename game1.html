@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game1</title>
+     <style>
+     .heading1{
+            text-align: center;
+            font-size: 50px;
+            color: rgb(222, 75, 64);
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+ 
+.exit{
+    background-color: rgb(222, 75, 64) ;
+    color: black;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid rgb(222, 75, 64) ;
+    width: 110px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+.aexit{
+    color: black;
+    text-decoration: none;
+}
+
+#box1{
+    display: flex;
+}
+#box2{
+    margin-left: 100px;
+}
+#youbox{
+    background-color: rgb(238, 235, 236);
+    width: 300px;
+    height: 300px;
+    margin: 20px 250px 20px 90px;
+   border-radius: 10px;
+   border:1px solid black;
+}
+#box3{
+    margin-left: 20px;
+}
+#compbox{
+    background-color: rgb(238, 235, 236);
+    width: 300px;
+    height: 300px;
+    margin: 20px 200px 20px 150px;
+      border-radius: 10px;
+   border:1px solid black;
+
+}
+h2{
+    margin-left: 200px;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: -40px;
+}
+.h2comp{
+    margin-left: 250px;
+}
+#box4{
+    display: flex;
+    padding: 20px 20px 20px 20px;
+}
+.rockpic{
+    margin: 10px 80px 10px 50px;
+}
+.paperpic{
+    margin: 10px 100px 10px 150px;
+}
+.scissorpic{
+    margin: 10px 100px 10px 80px;
+}
+img{
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+#para
+{
+    font-size:30px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left:45%;
+    background-color: orangered;
+    width:fit-content;
+}
+.picture{
+    width: 300px;
+    height: 300px;
+}
+    
+    </style>
+</head>
+<body>
+    <div class="top">
+    <h1 class="heading1">ROCK PAPER SCISSOR </h1>
+    <div class="btnexit">
+        <button class="exit"><a href="HOME.html" class="aexit">EXIT</a></button>
+    </div>
+    </div>
+<div id="box1">
+    <div id="box2">     
+    <h2 class="h2you">You</h2>
+    <div id="youbox"><img src="Questionmark.jpg" alt="" id="i1" class="picture"></div>
+    </div>
+    <div id="box3">  
+    <h2 class="h2comp">Computer</h2>
+    <div id="compbox"><img src="Questionmark.jpg" alt="" id="i2" class="picture"></div>
+    </div>
+</div>
+<p id="para"></p>
+<div id="box4">
+    <div class="rockpic" onclick="img1()"><img  src="rock.png" alt="error"></div>
+    <div class="paperpic" onclick="img2() "><img src="paper.png" alt="error"></div>
+    <div class="scissorpic" onclick="img3()"><img src="scissors.png" alt="error"></div>
+</div>
+
+<script>
+    var randomImage = new Array();
+    randomImage[0] = "rock.png";  
+    randomImage[1] = "paper.png";  
+    randomImage[2] = "scissors.png";
+    var number;
+    function img1()
+    {
+        document.getElementById('i1').src="rock.png"
+        randomimg();
+        if(number==0)
+        {
+            document.getElementById('para').innerHTML="IT'S A TIE"
+        }
+        else if(number==1)
+        {
+            document.getElementById('para').innerHTML="YOU LOST"
+        }
+        else if(number==2)
+        {
+            document.getElementById('para').innerHTML="YOU WON"
+        }
+        else
+        {
+            document.getElementById('para').innerHTML="" 
+        }    
+    }
+    function img2()
+    {
+        document.getElementById('i1').src="paper.png"
+        randomimg(); 
+        if(number==0)
+        {
+            document.getElementById('para').innerHTML="YOU WON"
+        }
+        else if(number==1)
+        {
+            document.getElementById('para').innerHTML="IT'S A TIE"
+        }
+        else if(number==2)
+        {
+            document.getElementById('para').innerHTML="YOU LOST"
+        }
+        else
+        {
+            document.getElementById('para').innerHTML="" 
+        }
+    }
+    function img3()
+    {
+        document.getElementById('i1').src="scissors.png"
+        randomimg(); 
+        if(number==0)
+        {
+            document.getElementById('para').innerHTML="YOU LOST"
+        }
+        else if(number==1)
+        {
+            document.getElementById('para').innerHTML="YOU WON"
+        }
+        else if(number==2)
+        {
+            document.getElementById('para').innerHTML="IT'S A TIE"
+        }
+        else
+        {
+            document.getElementById('para').innerHTML="" 
+        }
+    }
+  
+
+    function randomimg()
+    { 
+number = Math.floor(Math.random()*randomImage.length);  
+  
+
+return document.getElementById("i2").src = randomImage[number];  
+    }
+</script>
+
+</body>
+</html>

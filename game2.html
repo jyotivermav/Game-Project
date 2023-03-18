@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game2</title>
+    <style>
+        
+
+        .vv{
+            display: flex;
+        }
+        .block{
+            height:30px ;
+            width: 150px;
+            background-color:blue ;
+            margin: 2px;
+        }
+        .main{
+            display: flex;
+
+        }
+        .aa{
+            height:500px ;
+            width:500px ;
+            background-color: lightpink;
+            margin: 2px;
+        }
+        .bb{
+            height:500px ;
+            width: 500px;
+            background-color:lightslategray;
+            margin: 2px;
+        }
+        .d1{
+            background-color:plum;
+            height: 50px;
+            width: 350px;
+            margin: 30px 10px 5px 40px;
+
+        }
+        .d2{
+            background-color:lightskyblue;
+            height: 50px;
+            width: 350px;
+            margin: 30px 10px 5px 40px
+
+        }
+        #cc{
+            background-color: blueviolet;
+            color: white;
+            margin-left: 1400px;
+            height:40px ;
+            width: 80px;
+         }
+         #cc a{
+            text-align: center;
+            color:white;
+           text-decoration: none;
+        }
+
+
+        .dd{
+            background-color: blueviolet;
+            color: white;
+            margin-left: 500px;
+            height:40px ;
+            width: 80px;
+
+        }
+
+    </style>
+</head>
+<body>
+        <button id="cc"><a href="maingame.html"> Exit </a></button>
+
+    <div class="vv">
+        <div class="block" id="box1"></div>
+        <div class="block"id="box2"></div>
+        <div class="block"id="box3"></div>
+        <div class="block"id="box4"></div>
+        <div class="block"id="box5"></div>
+        <div class="block"id="box6"></div>
+        <div class="block"id="box7"></div>
+        <div class="block"id="box8"></div>
+        <div class="block"id="box9"></div>
+        <div class="block"id="box10"></div>
+        </div>
+        <div class="main">
+            <div class="aa">
+                <div class="d1">What country has the highest life expectancy? <input type="text" id="inp1"> <button class="btn1" onclick="check1()">OK</button></div>
+                <div class="d1">How many elements are in the periodic table? <input type="text" id="inp2"> <button class="btn2" onclick="check2()">OK</button></div>
+                <div class="d1">What company was originally called "Cadabra"? <input type="text" id="inp3"> <button class="btn3" onclick="check3()">OK</button></div>
+                <div class="d1">What Netflix show had the most streaming views in 2021? <input type="text" id="inp4"> <button class="btn4" onclick="check4()">OK</button></div>
+                <div class="d1">How many dots appear on a pair of dice? <input type="text" id="inp5"> <button class="btn5" onclick="check5()">OK</button></div>
+            </div>
+            <div class="bb">
+                <div class="d2">In what country was Elon Musk born? <input type="text" id="inp6"> <button class="btn6" onclick="check6()">OK</button></div>
+                <div class="d2">Where did sushi originated? <input type="text" id="inp7"> <button class="btn7" onclick="check7()">OK</button></div>
+                <div class="d2">What is the national sport of japan? <input type="text" id="inp8"> <button class="btn8" onclick="check8()">OK</button></div>
+                <div class="d2">What country drinks the most coffee? <input type="text" id="inp9"> <button class="btn9" onclick="check9()">OK</button></div>
+                <div class="d2">What phone company produced the 3310? <input type="text" id="inp10"> <button class="btn10"onclick="check10()" >OK</button></div>
+                
+            </div>
+        </div>
+        <div class="button">
+            <button class="dd">Submit</button>
+        </div>
+        <script>
+            var count=0;
+            function check1()
+            {
+                if(inp1.value=='Hong Kong')
+                {
+                    document.getElementById('box1').style.backgroundColor='green';
+                    document.getElementById('inp1').style.display='none';
+                    count++;
+                }
+                else
+                {
+                    document.getElementById('box1').style.backgroundColor='red';
+                    document.getElementById('inp1').style.display='none';
+                    
+                }
+
+            }
+
+            
+            function check2()
+            {
+                if(inp2.value=='118')
+                {
+                    document.getElementById('box2').style.backgroundColor='green';
+                    document.getElementById('inp2').style.display='none';
+                    count++;
+                }
+                else
+                {
+                    document.getElementById('box2').style.backgroundColor='red';
+                    document.getElementById('inp2').style.display='none';
+                    
+                }
+
+            }
+            function check3()
+            {
+                if(inp3.value=='Amazon')
+                {
+                    document.getElementById('box3').style.backgroundColor='green';
+                    document.getElementById('inp3').style.display='none';
+                    count++;
+                }
+                else
+                {
+                    document.getElementById('box3').style.backgroundColor='red';
+                    document.getElementById('inp3').style.display='none';
+                    
+                }
+
+            }
+            function check4()
+            {
+                if(inp4.value=='Squid Game')
+                {
+                    document.getElementById('box4').style.backgroundColor='green';
+                    document.getElementById('inp4').style.display='none';
+                    count++;
+                }
+                else
+                {
+                    document.getElementById('box4').style.backgroundColor='red';
+                    document.getElementById('inp4').style.display='none';
+                    
+                }
+
+            }
+            function check5()
+            {
+                if(inp5.value=='42')
+                {
+                    document.getElementById('box5').style.backgroundColor='green';
+                    document.getElementById('inp5').style.display='none';
+                    count++;
+                }
+                else
+                {
+                    document.getElementById('box5').style.backgroundColor='red';
+                    document.getElementById('inp5').style.display='none';
+                    
+                }
+  
+            }
+            function check6()
+            {
+                if(inp6.value=='South Africa')
+                {
+                    document.getElementById('box6').style.backgroundColor='green';
+                    document.getElementById('inp6').style.display='none';
+                    count++;
+                }
+                else
+                {
+                    document.getElementById('box6').style.backgroundColor='red';
+                    document.getElementById('inp6').style.display='none';
+                    
+                }
+
+            }
+            function check7()
+            {
+                if(inp7.value=='China')
+                {
+                    document.getElementById('box7').style.backgroundColor='green';
+                    document.getElementById('inp7').style.display='none';
+                    count++;
+                }
+                else
+                {
+                    document.getElementById('box7').style.backgroundColor='red';
+                    document.getElementById('inp7').style.display='none';
+                    
+                }
+
+            }
+            function check8()
+            {
+                if(inp8.value=='Sumo Wrestling')
+                {
+                    document.getElementById('box8').style.backgroundColor='green';
+                    document.getElementById('inp8').style.display='none';
+                    count++;
+                }
+                else
+                {
+                    document.getElementById('box8').style.backgroundColor='red';
+                    document.getElementById('inp8').style.display='none';
+                    
+                }
+
+            }
+            function check9()
+            {
+                if(inp9.value=='Finland')
+                {
+                    document.getElementById('box9').style.backgroundColor='green';
+                    document.getElementById('inp9').style.display='none';
+                    count++;
+                }
+                else
+                {
+                    document.getElementById('box9').style.backgroundColor='red';
+                    document.getElementById('inp9').style.display='none';
+                    
+                }
+
+            }
+            function check10()
+            {
+                if(inp10.value=='Nokia')
+                {
+                    document.getElementById('box10').style.backgroundColor='green';
+                    document.getElementById('inp10').style.display='none';
+                    count++;
+                }
+                else
+                {
+                    document.getElementById('box10').style.backgroundColor='red';
+                    document.getElementById('inp10').style.display='none';
+                    
+                }
+
+            }
+        </script>
+    
+</body>
+</html>
